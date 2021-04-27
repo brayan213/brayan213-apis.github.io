@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>- Taller Apis - </title>
+    
+    <h1> <center>&#127756;&#127758; &#127758;Consulta de Paises Del Mundo   &#127758;&#127758;&#127756;</center></h1>
+
+  
+   
+    <style >
+
+#contenedor { margin: 0 auto; width: 1000px;  border: 6px groove #167e91; max-height: 100%;}
+
+
+input {
+    margin-top:10px ;
+    border: 1px solid #2f8099;
+    background-color: #d4c8c8;
+    text-align: center;
+   
+    
+}
+
+h1{
+  margin-top:10px ;
+    border: 3px solid #2f8099;
+    background-color: #161616;
+    background-image: url('../proyecto2/abstracto-.jpg');
+}
+
+ #map {
+  height: 500px;
+  width: 100%;
+  
+}
+ 
+#flag-container img {
+  display: block;
+  width: 50%;
+  height: 80%;
+  border: 2px solid #33ac7a;
+}
+
+
+body {font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: rgb(7, 155, 253);
+  background-color: rgb(19, 16, 16);
+  align-items: center;
+  background-image: url('../proyecto2/th.jpg');
+  text-align:inherit;
+}
+
+fieldset{
+    
+    margin-top:20px ;
+    border: 1px solid #2f8099;
+    background-color: #161616;
+    
+}
+div{
+  align-content: center;
+}
+
+
+nav,
+footer {
+    clear: both;
+    color: #130f0f;
+    background-color: #2f8099;
+    height: 30px;
+    
+}
+nav ul{
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+}
+nav li {
+    display: inline;
+    margin-right: 40px;
+}
+
+nav li a{
+    color:#000000;
+}
+nav li a:hover,
+nav li a.current{
+    color:#ececec;
+}
+
+footer{
+    font-size: 90%;
+    padding: 6px 0px 10px 80px;
+    background-color: #081313;
+    background-image: url("../proyecto2/foto.png");
+    
+    
+}
+
+
+
+
+
+
+
+</style >
+</head>
+
+
+
+<body> 
+  
+
+
+  <nav>
+    <ul>
+
+      <li><a href="https://openweathermap.org/current">API Clima</a></li>
+        <li><a href="https://developers.google.com/maps/documentation/javascript/overview?hl=es">API google map</a></li>
+        <li><a href="https://api.covid19api.com/summary ">API covid</a></li>
+        <li><a href="https://restcountries.eu/rest/v2/all">API CONTRIES</a></li>
+        <li><a href="https://emojiterra.com/es/banderas-nacionales/">Emojis HTML</a></li>
+    
+    </ul>
+</nav>
+
+
+
+
+
+  <div id="contenedor">
+  
+
+
+    
+    <fieldset>
+    <div class="container mt-4 shadow-lg p3 mb-5 bg-body rounded">
+      <table class="table table-bordered table-striped">
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>NAME</th>
+                  <th>EMAIL</th>
+              </tr>
+          </thead>
+          <tbody id="data">
+          </tbody>
+    
+      </table>
+    
+    </div>
+  </fieldset>
+
+
+
+
+
+
+
+
+     <div class="input">
+    <center> <input type="text" placeholder="Digite Ciudad o Pais " class="input_text">
+        <input  type="submit" value="Buscar" class="submit" >
+      </div>
+    
+  
+    <div class="container">
+
+      <div class="card ">
+        <h1 class="name" id="name"></h1>
+        <p class="temp"></p>
+        <p class="tempmax"></p>
+        <p class="tempmin"></p>
+        <p class="clouds"></p>
+        <p class="desc"></p>
+      </div>
+    </div>
+  </center>
+
+
+
+
+
+
+  <h1>SELECCIONE UN PAIS &#127756;</h1>
+    <div id="main-container">
+      <div id="flag-container">
+        <img src="" alt="">
+      </div>
+      <div id="info-container">
+        <select id="countries"></select>
+        <p>Capital: <span id="capital"></span></p>
+        <p>Codigo postal: <span id="dialing-code"></span></p>
+        <p>Poblacion: <span id="population"></span></p>
+        <p>Moneda: <span id="currencies"></span></p>
+        <p>Region: <span id="region"></span></p>
+        <p>Subregion: <span id="subregion"></span></p>
+      </div>
+    </div>
+
+
+    
+
+    <fieldset>
+
+    <body>
+      <h1>INFO . COVID - GLOBAL &#127756;</h1>
+      <div id="informacion">
+
+    
+          <th> TotalConfirmed: <input type="text" id="TotalConfirmed" value="Cargando..." readonly />
+          <th> TotalDeaths:    <input type="text" id="TotalDeaths" value="Cargando..."readonly/>
+          <th> TotalRecovered: <input type="text" id="TotalRecovered"  value="Cargando..."readonly/>
+        
+          
+        
+      </div>
+  </body>
+
+</fieldset>
+
+
+
+
+    <div id="map"></div>
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqLOxjEOSotKDaYy3aiQXUdPwV79NPPlY&callback=initMap"></script>
+</script>
+
+ 
+    <script src="app-0.js"></script>
+    <footer>
+      &copy;2021 CONTRIES ...BRAYAN VAINILLA
+        </footer>
+</div >
+
+</body>
+
+</html>
